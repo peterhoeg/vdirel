@@ -161,7 +161,7 @@ If REPOSITORY is absent or nil, use the function `vdirel--repository'."
   (mapcar #'vdirel--parse-file-to-contact (vdirel--contact-files)))
 
 (defun vdirel--ensure-cache-ready (&optional refresh repository)
-  "Ensure REPOSITORY is REFRESH'd"
+  "Ensure REPOSITORY is REFRESH'd."
   (when (eq refresh 'server)
     (vdirel-vdirsyncer-sync-server repository))
   (when (or refresh (null (vdirel--cache-contacts repository)))
